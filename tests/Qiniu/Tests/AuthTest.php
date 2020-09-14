@@ -12,10 +12,10 @@ namespace Qiniu {
 
 namespace Qiniu\Tests {
     use Qiniu\Auth;
-
+    use PHPUnit\Framework\TestCase;
     // @codingStandardsIgnoreEnd
 
-    class AuthTest extends \PHPUnit_Framework_TestCase
+    class AuthTest extends TestCase
     {
 
         public function testSign()
@@ -66,6 +66,11 @@ namespace Qiniu\Tests {
 
         public function testVerifyCallback()
         {
+            global $testAuth;
+            global $customCallbackURL;
+            $token = 'QBox ' . $testAuth->signRequest($customCallbackURL, '', 'application/x-www-form-urlencoded');
+            $exp = 'QBox vHg2e7nOh7Jsucv2Azr5FH6omPgX22zoJRWa0FN5:HeZnhfcg9_9U7pfGoHVBdqY4o_g=';
+            $this->assertEquals($exp, $token);
         }
     }
 }

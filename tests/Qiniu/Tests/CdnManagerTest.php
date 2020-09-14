@@ -8,10 +8,11 @@
 
 namespace Qiniu\Tests;
 
-use Qiniu\Cdn\CdnManager;
 use Qiniu\Http\Client;
+use Qiniu\Cdn\CdnManager;
+use PHPUnit\Framework\TestCase;
 
-class CdnManagerTest extends \PHPUnit_Framework_TestCase
+class CdnManagerTest extends TestCase
 {
     protected $cdnManager;
     protected $encryptKey;

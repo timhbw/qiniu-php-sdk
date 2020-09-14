@@ -1,11 +1,12 @@
 <?php
 namespace Qiniu\Tests;
 
-use Qiniu\Storage\FormUploader;
-use Qiniu\Storage\UploadManager;
 use Qiniu\Config;
+use Qiniu\Storage\FormUploader;
+use PHPUnit\Framework\TestCase;
+use Qiniu\Storage\UploadManager;
 
-class FormUpTest extends \PHPUnit_Framework_TestCase
+class FormUpTest extends TestCase
 {
     protected $bucketName;
     protected $auth;

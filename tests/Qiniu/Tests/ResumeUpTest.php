@@ -1,12 +1,12 @@
 <?php
 namespace Qiniu\Tests;
 
-use Qiniu\Storage\ResumeUploader;
-use Qiniu\Storage\UploadManager;
-use Qiniu\Config;
 use Qiniu\Zone;
+use Qiniu\Config;
+use PHPUnit\Framework\TestCase;
+use Qiniu\Storage\UploadManager;
 
-class ResumeUpTest extends \PHPUnit_Framework_TestCase
+class ResumeUpTest extends TestCase
 {
     protected $bucketName;
     protected $auth;
