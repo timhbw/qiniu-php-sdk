@@ -1,6 +1,6 @@
 # Qiniu Cloud SDK for PHP
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/timhbw/qiniu-php-sdk.svg)](https://travis-ci.org/timhbw/qiniu-php-sdk.svg)
+[![Build Status](https://travis-ci.org/timhbw/qiniu-php-sdk.svg)](https://travis-ci.org/timhbw/qiniu-php-sdk)
 [![GitHub release](https://img.shields.io/github/v/tag/timhbw/qiniu-php-sdk.svg?label=release)](https://github.com/timhbw/qiniu-php-sdk/releases)
 [![Latest Stable Version](https://img.shields.io/packagist/v/timhbw/qiniu-php-sdk.svg)](https://packagist.org/packages/timhbw/qiniu-php-sdk)
 [![Total Downloads](https://img.shields.io/packagist/dt/timhbw/qiniu-php-sdk.svg)](https://packagist.org/packages/timhbw/qiniu-php-sdk)
