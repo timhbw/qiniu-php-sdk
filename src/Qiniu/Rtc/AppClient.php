@@ -29,7 +29,7 @@ class AppClient
      * @return array
      * @link  https://doc.qnsdk.com/rtn/docs/server_overview#2_1
      */
-    public function createApp($hub, $title, $maxUsers = null, $noAutoKickUser = false)
+    public function createApp($hub, $title, $maxUsers = null, $noAutoKickUser = null)
     {
         $params = array();
         $params['hub'] = $hub;
@@ -56,7 +56,7 @@ class AppClient
      * @return array
      * @link  https://doc.qnsdk.com/rtn/docs/server_overview#2_1
      */
-    public function updateApp($appId, $hub, $title, $maxUsers = null, $noAutoKickUser = false, $mergePublishRtmp = null)
+    public function updateApp($appId, $hub, $title, $maxUsers = null, $noAutoKickUser = null, $mergePublishRtmp = null)
     {
         $url = $this->baseURL . '/' . $appId;
         $params = array();

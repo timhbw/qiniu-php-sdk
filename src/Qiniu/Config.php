@@ -30,7 +30,7 @@ final class Config
     // 构造函数
     public function __construct(Region $z = null)
     {
-        $this->zone = $z;
+        $this->region = $z;
         $this->useHTTPS = false;
         $this->useCdnDomains = false;
         $this->regionCache = array();
