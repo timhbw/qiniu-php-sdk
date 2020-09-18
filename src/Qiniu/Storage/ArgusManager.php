@@ -84,7 +84,7 @@ final class ArgusManager
     private function getArHost()
     {
         $scheme = "http://";
-        if ($this->config->useHTTPS == true) {
+        if ($this->config->useHTTPS === true) {
             $scheme = "https://";
         }
         return $scheme . Config::ARGUS_HOST;

@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../autoload.php';
 
 use Qiniu\Auth;
+use Qiniu\Config;
 use Qiniu\Processing\PersistentFop;
 
 // 控制台获取密钥：https://portal.qiniu.com/user/key
@@ -17,7 +18,11 @@ $pipeline = 'pipeline_name';
 
 // 持久化处理完成后通知到你的业务服务器（需要可以公网访问，并能够相应 200 OK）
 $notifyUrl = 'http://375dec79.ngrok.com/notify.php';
-$pfop = new PersistentFop($auth, $bucket, $pipeline, $notifyUrl);
+
+$config = new Config();
+$config->useHTTPS=true;
+
+$pfop = new PersistentFop($auth, $config);
 
 $id = "z2.01z201c4oyre6q1hgy00murnel0002nh";
 

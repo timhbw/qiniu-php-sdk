@@ -256,6 +256,7 @@ final class BucketManager
         $to_line_after_days
     ) {
         $path = '/rules/add';
+        $params = array();
         if ($bucket) {
             $params['bucket'] = $bucket;
         }
@@ -297,6 +298,7 @@ final class BucketManager
         $to_line_after_days
     ) {
         $path = '/rules/update';
+        $params = array();
         if ($bucket) {
             $params['bucket'] = $bucket;
         }
@@ -341,6 +343,7 @@ final class BucketManager
     public function deleteBucketLifecycleRule($bucket, $name)
     {
         $path = '/rules/delete';
+        $params = array();
         if ($bucket) {
             $params['bucket'] = $bucket;
         }
@@ -379,6 +382,7 @@ final class BucketManager
         $host = null
     ) {
         $path = '/events/add';
+        $params = array();
         if ($bucket) {
             $params['bucket'] = $bucket;
         }
@@ -439,6 +443,7 @@ final class BucketManager
         $host = null
     ) {
         $path = '/events/update';
+        $params = array();
         if ($bucket) {
             $params['bucket'] = $bucket;
         }
@@ -499,6 +504,7 @@ final class BucketManager
     public function deleteBucketEvent($bucket, $name)
     {
         $path = '/events/delete';
+        $params = array();
         if ($bucket) {
             $params['bucket'] = $bucket;
         }
@@ -1004,7 +1010,7 @@ final class BucketManager
     private function getRsfHost()
     {
         $scheme = "http://";
-        if ($this->config->useHTTPS == true) {
+        if ($this->config->useHTTPS === true) {
             $scheme = "https://";
         }
         return $scheme . Config::RSF_HOST;
@@ -1013,7 +1019,7 @@ final class BucketManager
     private function getRsHost()
     {
         $scheme = "http://";
-        if ($this->config->useHTTPS == true) {
+        if ($this->config->useHTTPS === true) {
             $scheme = "https://";
         }
         return $scheme . Config::RS_HOST;
@@ -1022,7 +1028,7 @@ final class BucketManager
     private function getApiHost()
     {
         $scheme = "http://";
-        if ($this->config->useHTTPS == true) {
+        if ($this->config->useHTTPS === true) {
             $scheme = "https://";
         }
         return $scheme . Config::API_HOST;
@@ -1031,7 +1037,7 @@ final class BucketManager
     private function getUcHost()
     {
         $scheme = "http://";
-        if ($this->config->useHTTPS == true) {
+        if ($this->config->useHTTPS === true) {
             $scheme = "https://";
         }
         return $scheme . Config::UC_HOST;

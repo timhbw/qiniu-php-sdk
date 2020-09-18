@@ -31,6 +31,7 @@ class AppClient
      */
     public function createApp($hub, $title, $maxUsers = null, $noAutoKickUser = false)
     {
+        $params = array();
         $params['hub'] = $hub;
         $params['title'] = $title;
         if (!empty($maxUsers)) {
@@ -58,6 +59,7 @@ class AppClient
     public function updateApp($appId, $hub, $title, $maxUsers = null, $noAutoKickUser = false, $mergePublishRtmp = null)
     {
         $url = $this->baseURL . '/' . $appId;
+        $params = array();
         $params['hub'] = $hub;
         $params['title'] = $title;
         if (!empty($maxUsers)) {
@@ -154,6 +156,7 @@ class AppClient
      */
     public function listActiveRooms($appId, $prefix = null, $offset = null, $limit = null)
     {
+        $query = array();
         if (isset($prefix)) {
             $query['prefix'] = $prefix;
         }
@@ -185,6 +188,7 @@ class AppClient
      */
     public function appToken($appId, $roomName, $userId, $expireAt, $permission)
     {
+        $params = array();
         $params['appId'] = $appId;
         $params['userId'] = $userId;
         $params['roomName'] = $roomName;

@@ -2,8 +2,8 @@
 namespace Qiniu\Processing;
 
 use Qiniu\Config;
-use Qiniu\Http\Client;
 use Qiniu\Http\Error;
+use Qiniu\Http\Client;
 use Qiniu\Processing\Operation;
 
 /**
