@@ -338,29 +338,29 @@ final class BucketManager
     ) {
         $path = '/events/add';
         $params = array();
-        if ($bucket) {
+        if (! empty($bucket)) {
             $params['bucket'] = $bucket;
         }
-        if ($name) {
+        if (! empty($name)) {
             $params['name'] = $name;
         }
-        if ($prefix) {
+        if (! empty($prefix)) {
             $params['prefix'] = $prefix;
         }
-        if ($suffix) {
+        if (! empty($suffix)) {
             $params['suffix'] = $suffix;
         }
-        if ($callbackURL) {
+        if (! empty($callbackURL)) {
             $params['callbackURL'] = $callbackURL;
         }
-        if ($access_key) {
+        if (! empty($access_key)) {
             $params['access_key'] = $access_key;
         }
-        if ($host) {
+        if (! empty($host)) {
             $params['host'] = $host;
         }
         $data = http_build_query($params);
-        if ($event) {
+        if (! empty($event)) {
             $eventpath = "";
             foreach ($event as $key => $value) {
                 $eventpath .= "&event=$value";
@@ -399,40 +399,39 @@ final class BucketManager
     ) {
         $path = '/events/update';
         $params = array();
-        if ($bucket) {
+        if (! empty($bucket)) {
             $params['bucket'] = $bucket;
         }
-        if ($name) {
+        if (! empty($name)) {
             $params['name'] = $name;
         }
-        if ($prefix) {
+        if (! empty($prefix)) {
             $params['prefix'] = $prefix;
         }
         if ($suffix) {
             $params['suffix'] = $suffix;
         }
-        if ($event) {
+        if (! empty($event)) {
             $params['event'] = $event;
         }
-        if ($callbackURL) {
+        if (! empty($callbackURL)) {
             $params['callbackURL'] = $callbackURL;
         }
-        if ($access_key) {
+        if (! empty($access_key)) {
             $params['access_key'] = $access_key;
         }
-        if ($host) {
+        if (! empty($host)) {
             $params['host'] = $host;
         }
         $data = http_build_query($params);
-        if ($event) {
+        if (! empty($event)) {
             $eventpath = "";
             foreach ($event as $key => $value) {
                 $eventpath .= "&event=$value";
             }
             $data .= $eventpath;
         }
-        $info = $this->ucPost($path, $data);
-        return $info;
+        return $this->ucPost($path, $data);
     }
 
     /**
@@ -444,8 +443,7 @@ final class BucketManager
     public function getBucketEvents($bucket)
     {
         $path = '/events/get?bucket=' . $bucket;
-        $info = $this->ucGet($path);
-        return $info;
+        return $this->ucGet($path);
     }
 
     /**
