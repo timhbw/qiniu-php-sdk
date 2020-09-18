@@ -27,9 +27,8 @@ $limit = 1000;
 $delimiter = '';
 
 list($ret, $err) = $bucketManager->listFilesv2($bucket, $prefix, $marker, $limit, $delimiter, true);
-
-if ($err) {
-    print_r($err);
+if ($err != null) {
+    var_dump($err);
 } else {
-    print_r($ret);
+    var_dump($ret);
 }

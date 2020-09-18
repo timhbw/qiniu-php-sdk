@@ -7,8 +7,8 @@ use Qiniu\Etag;
 
 $localFile = "./php-logo.png";
 list($etag, $err) = Etag::sum($localFile);
-if ($err == null) {
-    echo "Etag: $etag";
-} else {
+if ($err != null) {
     var_dump($err);
+} else {
+    echo "Etag: $etag";
 }

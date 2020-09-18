@@ -588,8 +588,7 @@ final class BucketManager
     public function delete($bucket, $key)
     {
         $path = '/delete/' . \Qiniu\entry($bucket, $key);
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
     /**
@@ -625,8 +624,7 @@ final class BucketManager
         if ($force === true) {
             $path .= '/force/true';
         }
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
     /**
@@ -648,8 +646,7 @@ final class BucketManager
         if ($force) {
             $path .= '/force/true';
         }
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
     /**
@@ -667,8 +664,7 @@ final class BucketManager
         $resource = \Qiniu\entry($bucket, $key);
         $encode_mime = \Qiniu\base64_urlSafeEncode($mime);
         $path = '/chgm/' . $resource . '/mime/' . $encode_mime;
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
 
@@ -686,8 +682,7 @@ final class BucketManager
     {
         $resource = \Qiniu\entry($bucket, $key);
         $path = '/chtype/' . $resource . '/type/' . $fileType;
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
     /**
@@ -704,8 +699,7 @@ final class BucketManager
     {
         $resource = \Qiniu\entry($bucket, $key);
         $path = '/chstatus/' . $resource . '/status/' . $status;
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
     /**
@@ -833,8 +827,7 @@ final class BucketManager
         $ioHost = $this->config->getIovipHost($ak, $bucket);
 
         $url = $ioHost . $path;
-        list(, $error) = $this->post($url, null);
-        return $error;
+        return $this->post($url, null);
     }
 
     /**
@@ -873,8 +866,7 @@ final class BucketManager
     {
         $entry = \Qiniu\entry($bucket, $key);
         $path = "/deleteAfterDays/$entry/$days";
-        list(, $error) = $this->rsPost($path);
-        return $error;
+        return $this->rsPost($path);
     }
 
     private function getRsfHost()
