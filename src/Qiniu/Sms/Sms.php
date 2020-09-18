@@ -306,7 +306,7 @@ class Sms
             if ($fp) {
                 $filesize = filesize($app_img_file);
                 if ($filesize > 5 * 1024 * 1024) {
-                    die("pic size < 5M !");
+                    throw new \Exception("pic size < 5M !", 1);
                 }
                 $content = fread($fp, $filesize);
                 $file_content = chunk_split(base64_encode($content)); // base64编码
