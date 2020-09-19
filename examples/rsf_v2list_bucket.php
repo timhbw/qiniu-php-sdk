@@ -7,7 +7,7 @@ use Qiniu\Storage\BucketManager;
 // 控制台获取密钥：https://portal.qiniu.com/user/key
 $accessKey = getenv('QINIU_ACCESS_KEY');
 $secretKey = getenv('QINIU_SECRET_KEY');
-$bucket = 'xxxx';
+$bucket = getenv('QINIU_TEST_BUCKET');
 
 $auth = new Auth($accessKey, $secretKey);
 $bucketManager = new BucketManager($auth);

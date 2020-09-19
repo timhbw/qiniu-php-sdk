@@ -187,7 +187,7 @@ final class BucketManager
             return array(null, new Error($url, $ret));
         }
         $r = explode("\n", $ret->body);
-        $pop = array_pop($r);
+        array_pop($r);
         return array($r, null);
     }
 
@@ -966,12 +966,6 @@ final class BucketManager
         }
         $r = ($ret->body === null) ? array() : $ret->json();
         return array($r, null);
-    }
-
-    private function ucPostV2($path, $body)
-    {
-        $url = $this->getUcHost() . $path;
-        return $this->postV2($url, $body);
     }
 
     private function postV2($url, $body)
