@@ -40,3 +40,10 @@ build:
             tests:
                 override:
                     - php-scrutinizer-run
+        coverage:
+            tests:
+                override:
+                    - command: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+                      coverage:
+                          file: ./coverage.xml
+                          format: xml
