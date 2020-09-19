@@ -41,7 +41,7 @@ final class PersistentFop
      * @param string $fops       string|array  待处理的pfop操作，多个pfop操作以array的形式传入。
      *                    eg. avthumb/mp3/ab/192k, vframe/jpg/offset/7/w/480/h/360
      * @param string $pipeline   资源处理队列
-     * @param string$notify_url 处理结果通知地址
+     * @param string $notify_url 处理结果通知地址
      * @param bool $force      是否强制执行一次新的指令
      *
      *
