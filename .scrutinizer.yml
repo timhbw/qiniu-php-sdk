@@ -38,3 +38,4 @@ build:
             tests:
                 override:
                     - php-scrutinizer-run
+                    - phpcs-run
