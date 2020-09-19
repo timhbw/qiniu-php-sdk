@@ -60,10 +60,10 @@ var_dump($waterLink);
  * @param  string $font 文字字体
  * @param  string $fontSize 文字字号
  * @param  string $fontColor 文字颜色 [可选]
- * @param  numeric $dissolve 透明度 [可选]
+ * @param  int $dissolve 透明度 [可选]
  * @param  string $gravity 水印位置 [可选]
- * @param  numeric $dx 横轴边距 [可选]
- * @param  numeric $dy 纵轴边距 [可选]
+ * @param  int $dx 横轴边距 [可选]
+ * @param  int $dy 纵轴边距 [可选]
  * @link   http://developer.qiniu.com/code/v6/api/kodo-api/image/watermark.html#text-watermark
  * @return string
  * @author Sherlock Ren <sherlock_ren@icloud.com>

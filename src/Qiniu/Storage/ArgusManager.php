@@ -30,9 +30,9 @@ final class ArgusManager
     /**
      * 视频审核
      *
-     * @param $body     body信息
+     * @param string $body body信息
      *
-     * @return mixed      成功返回NULL，失败返回对象Qiniu\Http\Error
+     * @return array 成功返回NULL，失败返回对象Qiniu\Http\Error
      * @link  https://developer.qiniu.com/censor/api/5620/video-censor
      */
     public function censorVideo($body)
@@ -46,9 +46,9 @@ final class ArgusManager
     /**
      * 图片审核
      *
-     * @param $body
+     * @param string $body
      *
-     * @return mixed      成功返回NULL，失败返回对象Qiniu\Http\Error
+     * @return array   成功返回NULL，失败返回对象Qiniu\Http\Error
      * @link  https://developer.qiniu.com/censor/api/5588/image-censor
      */
     public function censorImage($body)
@@ -61,7 +61,7 @@ final class ArgusManager
     /**
      * 查询视频审核结果
      *
-     * @param $jobid  任务ID
+     * @param string $jobid  任务ID
      * @return array
      * @link  https://developer.qiniu.com/censor/api/5620/video-censor
      */

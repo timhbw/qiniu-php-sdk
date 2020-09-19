@@ -107,11 +107,11 @@ final class ImageUrlBuilder
      *
      * @param  string $url 图片链接
      * @param  string $image 水印图片链接
-     * @param  numeric $dissolve 透明度
+     * @param  int $dissolve 透明度
      * @param  string $gravity 水印位置
-     * @param  numeric $dx 横轴边距
-     * @param  numeric $dy 纵轴边距
-     * @param  numeric $watermarkScale 自适应原图的短边比例
+     * @param  int $dx 横轴边距
+     * @param  int $dy 纵轴边距
+     * @param  int $watermarkScale 自适应原图的短边比例
      * @link   http://developer.qiniu.com/code/v6/api/kodo-api/image/watermark.html
      * @return string
      * @author Sherlock Ren <sherlock_ren@icloud.com>
@@ -179,10 +179,10 @@ final class ImageUrlBuilder
      * @param  string $font 文字字体
      * @param  string $fontSize 文字字号
      * @param  string $fontColor 文字颜色
-     * @param  numeric $dissolve 透明度
+     * @param  int $dissolve 透明度
      * @param  string $gravity 水印位置
-     * @param  numeric $dx 横轴边距
-     * @param  numeric $dy 纵轴边距
+     * @param  int $dx 横轴边距
+     * @param  int $dy 纵轴边距
      * @link   http://developer.qiniu.com/code/v6/api/kodo-api/image/watermark.html#text-watermark
      * @return string
      * @author Sherlock Ren <sherlock_ren@icloud.com>
