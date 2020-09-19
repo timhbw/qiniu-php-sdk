@@ -43,7 +43,7 @@ build:
         coverage:
             tests:
                 override:
-                    - command: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+                    - command: ./vendor/bin/phpunit --coverage-clover=coverage.clover
                       coverage:
-                          file: ./coverage.xml
-                          format: xml
+                          file: ./coverage.clover
+                          format: clover
