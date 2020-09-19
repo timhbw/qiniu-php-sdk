@@ -24,7 +24,7 @@ if (!defined('QINIU_FUNCTIONS_VERSION')) {
     /**
      * 计算输入流的crc32检验码
      *
-     * @param $data 待计算校验码的字符串
+     * @param string $data 待计算校验码的字符串
      *
      * @return string 输入字符串的crc32校验码
      */
@@ -245,7 +245,7 @@ if (!defined('QINIU_FUNCTIONS_VERSION')) {
     /**
      *  从uptoken解析accessKey和bucket
      *
-     * @param $upToken
+     * @param string $upToken 上传凭证
      * @return array(ak,bucket,err=null)
      */
     function explodeUpToken($upToken)

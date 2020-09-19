@@ -20,7 +20,7 @@ $bucket = 'xxxx';
 $name = 'demo';
 $prefix = 'test';
 $suffix = 'mp4';
-$event = 'mkfile';
+$event = array("move","copy");
 $callbackURL = 'https://www.qiniu.com';
 
 list($ret, $err) = $bucketManager->updateBucketEvent($bucket, $name, $prefix, $suffix, $event, $callbackURL);
