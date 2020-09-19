@@ -27,4 +27,3 @@ env:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
