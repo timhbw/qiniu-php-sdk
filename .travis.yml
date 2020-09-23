@@ -1,15 +1,10 @@
 language: php
 
 php:
-  - 7.0
   - 7.4
 
 dist: trusty
 os: linux
-
-cache:
-  directories:
-    - $HOME/.composer/cache
 
 before_script:
   - export QINIU_TEST_ENV="travis"
