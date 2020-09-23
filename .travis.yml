@@ -17,9 +17,5 @@ script:
   - ./vendor/bin/phpcs --standard=PSR2 tests
   - ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
-env:
-  global:
-    - secure: "McRLEy2ukW4FdlzEN+FwiBLHE7/H3VConsJibTkw+OFIEEd40DdD96fYQ1k41enTsYjQoFfJNMDmsXUiZ/3e7OxyqfMU+rYGh0dSs4Jbkm+Br7qzGZ81fsuosvQT6FD5/Hs7u9MADmyHcwFuhdunZa3nE3q+xYAUeq6BdzSRI31N/1pKD0ZdaEUfDjyQj82c5gsHFwvp72qVAzMkkB2t2Y6Yqel2IArXecN7WmBEC67ew5zPB16Tqt27MTrH5JXGGIGY2Yu9h5hpGl1xlqlE0jw+TmnnyPboEIyhm+3VKkUDd4aiJ3LtMTJwbY+BcrLL8wlbgXkjbM2GDlk1XSmQwyXUS+DqX7gJLOqn1SPCf9S3wFqtB+PUPpRkq5SkXJH14Z7Zmbvzq+AJZ8JoQGmTAKwotjJ5RVahv4EG8i7Dw3pnILBlguizla3D0Ex3VnR1jNi1lAWGffw5x/8RDzVjrZJqv8qKdyUyNUiDoP/pzJHWM0sBxMThGwl4h7wAPvIpHyPFkIonz0rWhqXzBCBWWce4g5O2x0yCExucOBvB3fYpp77W2VfaCi5nCK5f/39pBdheILTLF36lSGEVnasSlCxCnx9J8cVbhgLWBUpKnPRhAT7iEjsMWnDhDUGBs+qcTM/NK29gedzHnQ1xOvoPTHaF6YPnZH0rnc3ubO1UI8k="
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
