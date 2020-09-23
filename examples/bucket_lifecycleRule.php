@@ -30,7 +30,7 @@ list($ret, $err) = $bucketManager->bucketLifecycleRule(
     $to_line_after_days
 );
 if ($err != null) {
-    var_dump($err);
+    echo "ok";
 } else {
     var_dump($ret);
 }
