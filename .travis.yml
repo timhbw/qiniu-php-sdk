@@ -6,6 +6,10 @@ php:
 dist: trusty
 os: linux
 
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 before_script:
   - export QINIU_TEST_ENV="travis"
   - travis_retry composer self-update
